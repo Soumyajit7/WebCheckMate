@@ -1,0 +1,14 @@
+.scrollable-content {
+  border: 0px solid red;
+}
+
+.scroll-text{
+    margin-top: 900px;
+}
+
+.scroll_div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20rem;
+}

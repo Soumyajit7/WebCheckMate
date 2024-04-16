@@ -1,0 +1,12 @@
+fieldset {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.my-popup-class {
+  border: 2px solid red;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

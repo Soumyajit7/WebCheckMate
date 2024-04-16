@@ -1,0 +1,52 @@
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h3{
+    padding-right: 1rem;
+}
+
+.dropdown {
+  font-size: 1rem;
+  padding: 5px;
+  margin-bottom: 1rem;
+}
+
+.button {
+  font-size: 1rem;
+  padding: 5px;
+  background-color: rgb(10, 104, 199);
+  border: 0px solid red;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save_btn{
+    background-color: rgb(0, 160, 51);
+    margin-bottom: 1rem;
+}
+
+.form_div {
+  text-align: left;
+  margin: 1rem;
+}
+
+.basic-multi-select {
+  color: black;
+  font-size: 1rem;
+}
+
+p {
+  margin-bottom: 5px;
+}
+
+.icons{
+    cursor: pointer;
+    /* border: 1px solid red; */
+    padding: 1rem;
+    margin-top: 10px;
+}

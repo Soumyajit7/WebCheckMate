@@ -1,0 +1,369 @@
+.mousehover_container {
+  margin-top: 3rem;
+  height: 100vh;
+}
+.mousehover_container .card {
+  position: relative;
+  height: 12rem;
+  box-shadow: 0 0 2rem -1rem rgba(0, 0, 0, 0.05);
+  margin-top: 5rem;
+}
+
+.mousehover_container .card .multi-button {
+  z-index: 0;
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  border-radius: 100%;
+  width: 0rem;
+  height: 0rem;
+  transform: translate(-50%, -50%);
+  transition: 0.25s cubic-bezier(0.25, 0, 0, 1);
+}
+.mousehover_container .card .multi-button button {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 100%;
+  background: var(--background);
+  color: var(--text);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: 0.25s cubic-bezier(0.25, 0, 0, 1);
+  box-shadow: 0 0 0rem -0.25rem var(--background);
+}
+.mousehover_container .card .multi-button button:hover {
+  background: var(--text);
+  color: var(--background);
+  box-shadow: 0 0 1rem -0.25rem var(--background);
+}
+.mousehover_container .card .multi-button button:first-child:nth-last-child(1) {
+  left: 25%;
+  top: 25%;
+}
+.mousehover_container
+  .card
+  .multi-button
+  button:first-child:nth-last-child(2):nth-child(1),
+.mousehover_container
+  .card
+  .multi-button
+  button:first-child:nth-last-child(2)
+  ~ *:nth-child(1) {
+  left: 37.5%;
+  top: 18.75%;
+}
+.mousehover_container
+  .card
+  .multi-button
+  button:first-child:nth-last-child(2):nth-child(2),
+.mousehover_container
+  .card
+  .multi-button
+  button:first-child:nth-last-child(2)
+  ~ *:nth-child(2) {
+  left: 18.75%;
+  top: 37.5%;
+}
+.mousehover_container
+  .card
+  .multi-button
+  button:first-child:nth-last-child(3):nth-child(1),
+.mousehover_container
+  .card
+  .multi-button
+  button:first-child:nth-last-child(3)
+  ~ *:nth-child(1) {
+  left: 50%;
+  top: 15.625%;
+}
+.mousehover_container
+  .card
+  .multi-button
+  button:first-child:nth-last-child(3):nth-child(2),
+.mousehover_container
+  .card
+  .multi-button
+  button:first-child:nth-last-child(3)
+  ~ *:nth-child(2) {
+  left: 25%;
+  top: 25%;
+}
+.mousehover_container
+  .card
+  .multi-button
+  button:first-child:nth-last-child(3):nth-child(3),
+.mousehover_container
+  .card
+  .multi-button
+  button:first-child:nth-last-child(3)
+  ~ *:nth-child(3) {
+  left: 15.625%;
+  top: 50%;
+}
+.mousehover_container
+  .card
+  .multi-button
+  button:first-child:nth-last-child(4):nth-child(1),
+.mousehover_container
+  .card
+  .multi-button
+  button:first-child:nth-last-child(4)
+  ~ *:nth-child(1) {
+  left: 62.5%;
+  top: 18.75%;
+}
+.mousehover_container
+  .card
+  .multi-button
+  button:first-child:nth-last-child(4):nth-child(2),
+.mousehover_container
+  .card
+  .multi-button
+  button:first-child:nth-last-child(4)
+  ~ *:nth-child(2) {
+  left: 37.5%;
+  top: 18.75%;
+}
+.mousehover_container
+  .card
+  .multi-button
+  button:first-child:nth-last-child(4):nth-child(3),
+.mousehover_container
+  .card
+  .multi-button
+  button:first-child:nth-last-child(4)
+  ~ *:nth-child(3) {
+  left: 18.75%;
+  top: 37.5%;
+}
+.mousehover_container
+  .card
+  .multi-button
+  button:first-child:nth-last-child(4):nth-child(4),
+.mousehover_container
+  .card
+  .multi-button
+  button:first-child:nth-last-child(4)
+  ~ *:nth-child(4) {
+  left: 18.75%;
+  top: 62.5%;
+}
+.mousehover_container .card .container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  background: var(--background);
+  color: var(--text);
+}
+.mousehover_container .card:hover .multi-button,
+.mousehover_container .card .multi-button:focus-within {
+  width: 10rem;
+  height: 10rem;
+}
+
+/* 2nd component  */
+
+.super-box .container {
+  /* border: 2px solid red; */
+  margin-top: 7rem;
+  width: 220px;
+  height: 220px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.box {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-radius: 3px;
+  overflow: hidden;
+  -webkit-transition: -webkit-box-shadow ease 1s;
+  transition: -webkit-box-shadow ease 1s;
+  transition: box-shadow ease 1s;
+  transition: box-shadow ease 1s, -webkit-box-shadow ease 1s;
+}
+
+.icon {
+  position: relative;
+  margin-top: 8px;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  -webkit-transition-delay: 0.32s;
+  transition-delay: 0.32s;
+  will-change: transform;
+  color: rgb(18, 113, 230);
+}
+
+.icon_bg {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  border: 1px solid rgba(225, 227, 232, 0.18);
+  -webkit-box-shadow: 0 3px 4px 0 rgba(44, 71, 146, 0.25);
+  box-shadow: 0 3px 4px 0 rgba(44, 71, 146, 0.25);
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  -webkit-transition-delay: 0.32s;
+  transition-delay: 0.32s;
+  will-change: transform;
+}
+
+.title {
+  position: relative;
+}
+
+.super-box:hover .box {
+  /*   border: 1px solid rgba(225, 227, 232, 0.18); */
+  -webkit-box-shadow: 0 3px 4px 0 rgba(44, 71, 146, 0.25);
+  box-shadow: 0 3px 4px 0 rgba(44, 71, 146, 0.25);
+  -webkit-transition-delay: 0.32s;
+  transition-delay: 0.32s;
+}
+
+.super-box:hover .icon_bg {
+  -webkit-transform: translateY(-32px) scale(6);
+  transform: translateY(-32px) scale(6);
+}
+
+.super-box:hover .icon {
+  -webkit-transform: translateY(-48px) scale(1.4);
+  transform: translateY(-48px) scale(1.4);
+}
+
+.super-box {
+  width: 220px;
+  height: 220px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.text {
+  position: relative;
+  top: -32px;
+  width: 200px;
+  text-align: center;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-transition-delay: 0.32s;
+  transition-delay: 0.32s;
+}
+
+.super-box:hover .text {
+  opacity: 0;
+  -webkit-transform: translateY(-4px) scale(0.8);
+  transform: translateY(-4px) scale(0.8);
+}
+
+.box::after {
+  content: "Welcome to WebCheckMate. Mouse Hover test for Automation Tester";
+  position: absolute;
+  width: 170px;
+  top: 111px;
+  opacity: 0;
+  font-size: 13px;
+  color: #5d6494;
+  line-height: 20px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transition-delay: 0.32s;
+  transition-delay: 0.32s;
+}
+
+.super-box:hover .box::after {
+  opacity: 1;
+}
+
+.dr {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 100px;
+}
+
+/* 3rd component  */
+
+.sickhover_container {
+  display: grid;
+  font-family: system-ui, sans;
+  font-size: 3.5rem;
+  font-weight: 800;
+  place-items: center;
+  border-radius: 10px;
+}
+
+.hover-effect {
+  color: #fff;
+  position: relative;
+  text-decoration: none;
+  z-index: 0;
+  padding: 0 20px;
+}
+
+.hover-effect::before {
+  background: hsl(42, 100%, 50%);
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.hover-effect:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
