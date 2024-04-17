@@ -1,8 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { RiArrowGoBackFill } from "react-icons/ri";
 import "../styles/mousehover.css";
-import Swal from "sweetalert2";
 import "@fortawesome/fontawesome-free/css/all.css";
 import { FaHandPointDown } from "react-icons/fa";
 import { FaArrowPointer } from "react-icons/fa6";

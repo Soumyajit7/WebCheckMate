@@ -10,3 +10,16 @@ fieldset {
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+.interests_container{
+  display: flex;
+  padding: 10px;
+  border: 1px solid white;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  width:fit-content;
+}
+
+.interests_container p{
+  padding: 10px;
+}

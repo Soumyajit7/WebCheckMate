@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { RiArrowGoBackFill } from "react-icons/ri";
 import "../styles/popup.css";
@@ -96,7 +96,7 @@ const Popup = () => {
           Click For Github Account
         </button>
         <div className="user_details_container">
-          {testerDP ? <img src={testerDP} className="image_dp" /> : ""}
+          {testerDP ? <img src={testerDP} className="image_dp" alt="dp" /> : ""}
           {testerName ? <p>Name : {testerName}</p> : ""}
           {testerUserName ? <p>Username : {testerUserName}</p> : ""}
           {testerBio ? <p>Bio : {testerBio}</p> : ""}

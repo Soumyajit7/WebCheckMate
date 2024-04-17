@@ -13,11 +13,22 @@ const interestOptions = [
 ];
 
 const Checkbox = () => {
-  const [selectedInterestOptions, setSelectedInterestOptions] = useState(null);
+  const [selectedInterestOptions, setSelectedInterestOptions] = useState([]);
   const [selectedColor, setColor] = useState("");
 
-  const handleInterestsChange = (options) => {
-    setSelectedInterestOptions(options);
+  const handleInterestsChange = (event) => {
+    if (event.target.checked) {
+      setSelectedInterestOptions([
+        ...selectedInterestOptions,
+        event.target.value,
+      ]);
+    } else {
+      setSelectedInterestOptions(
+        selectedInterestOptions.filter(
+          (interest) => interest !== event.target.value
+        )
+      );
+    }
   };
 
   //  radio button to choose color
@@ -37,16 +48,17 @@ const Checkbox = () => {
       "#008080": "Teal",
       "#000080": "Navy",
     };
-  
-    let htmlContent = '<div style="display: flex; flex-wrap: wrap; justify-content: space-between;">';
+
+    let htmlContent =
+      '<div style="display: flex; flex-wrap: wrap; justify-content: space-between;">';
     for (const [color, name] of Object.entries(inputOptions)) {
       htmlContent += `<label style="flex: 1 0 21%; margin: 5px; padding: 10px; color: ${color}; border: 1px solid ${color}; border-radius: 5px;">
-                        <input type="radio" name="color" value="${color}" />
-                        ${name}
-                      </label>`;
+                      <input type="radio" name="color" value="${color}" />
+                      ${name}
+                    </label>`;
     }
-    htmlContent += '</div>';
-  
+    htmlContent += "</div>";
+
     const { value: color } = await Swal.fire({
       title: "Select color",
       html: htmlContent,
@@ -57,18 +69,17 @@ const Checkbox = () => {
         });
       },
     });
-  
+
     if (color) {
       setColor(color);
       Swal.fire({
         html: `<div style="display: flex; align-items: center; justify-content: center;">
-                  <span>You selected: ${color}</span>
-                  <div style="width: 20px; height: 20px; background-color: ${color}; margin-left: 10px;"></div>
-               </div>`,
+                <span>You selected: ${color}</span>
+                <div style="width: 20px; height: 20px; background-color: ${color}; margin-left: 10px;"></div>
+             </div>`,
       });
     }
   };
-  
 
   return (
     <div>
@@ -87,11 +98,17 @@ const Checkbox = () => {
               id={option.id}
               name="interest"
               value={option.value}
+              onChange={handleInterestsChange}
             />
             <label htmlFor={option.id}>{option.label}</label>
           </div>
         ))}
       </fieldset>
+      <div className="interests_container">
+        {selectedInterestOptions.map((interest, index) => {
+          return <p key={index}>{interest}</p>;
+        })}
+      </div>
       <button className="button" onClick={handleClickColor}>
         Select your favourite color
       </button>
