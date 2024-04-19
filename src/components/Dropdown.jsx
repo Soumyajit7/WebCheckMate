@@ -76,9 +76,6 @@ const Dropdown = () => {
     Swal.fire("Your Current Age is", age);
   };
 
-  //   save button
-  const handleClickSave = () => {};
-
   //   method to calculate age
   function calculateAge(birthDate, birthTime) {
     const birthDateTimeString = `${
@@ -112,6 +109,14 @@ const Dropdown = () => {
     setDate(date);
   };
 
+  const handleClickDropdownCheck = (e) => {
+    e.preventDefault();
+    Swal.fire({
+      html: `You have selected gender : ${selectedGender}<br/>Your favourite fruits : ${selectedFruitOptions
+        .map((f) => f.label)
+        .join(", ")}`,
+    });
+  };
 
   return (
     <div>
@@ -121,53 +126,57 @@ const Dropdown = () => {
         </Link>
         <h3>Dropdown Check</h3>
       </div>
-      <form>
-        <div className="form_div">
-          <p htmlFor="gender">Choose your gender</p>
-          <select
-            value={selectedGender}
-            onChange={handleGenderChange}
-            className="dropdown"
-          >
-            {genderOptions.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div className="form_div">
-          <p htmlFor="cars">Choose your favourite fruits (select multiple)</p>
-          <Select
-            isMulti
-            name="fruit"
-            options={fruitOptions}
-            className="basic-multi-select"
-            classNamePrefix="select"
-            onChange={handleFruitChange}
-            value={selectedFruitOptions}
-          />
-        </div>
-        <div className="form_div">
-          <h3>Age Calculator</h3>
-          <p>Enter your date of birth : {date.toLocaleDateString()}</p>
-          <Calendar onChange={handleDateChange} value={date} />
-          <p>Enter your time of birth : {time}</p>
-          <input
-            className="dropdown"
-            type="time"
-            value={time}
-            onChange={handleTimeChange}
-          />
-          <br />
-          <button className="button" onClick={handleClickCalculateAge}>
-            Calculate Age
+      <div className="compo_container">
+        <form>
+          <div className="form_div">
+            <p htmlFor="gender">Choose your gender</p>
+            <select
+              value={selectedGender}
+              onChange={handleGenderChange}
+              className="dropdown"
+            >
+              {genderOptions.map((option) => (
+                <option key={option.value} value={option.value}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="form_div">
+            <p htmlFor="cars">Choose your favourite fruits (select multiple)</p>
+            <Select
+              isMulti
+              name="fruit"
+              options={fruitOptions}
+              className="basic-multi-select"
+              classNamePrefix="select"
+              onChange={handleFruitChange}
+              value={selectedFruitOptions}
+            />
+          </div>
+          <button className="button" onClick={handleClickDropdownCheck}>
+            Check
           </button>
-        </div>
-        <button className="button save_btn" onClick={handleClickSave}>
-          Save
-        </button>
-      </form>
+          <div className="form_div">
+            <h3>Age Calculator</h3>
+            <p className="p_tag">
+              Enter your date of birth : {date.toLocaleDateString()}
+            </p>
+            <Calendar onChange={handleDateChange} value={date} />
+            <p className="p_tag">Enter your time of birth : {time}</p>
+            <input
+              className="dropdown"
+              type="time"
+              value={time}
+              onChange={handleTimeChange}
+            />
+            <br />
+            <button className="button" onClick={handleClickCalculateAge}>
+              Calculate Age
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

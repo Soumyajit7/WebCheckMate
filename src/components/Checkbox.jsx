@@ -87,7 +87,7 @@ const Checkbox = () => {
         <Link to="/" className="links">
           <RiArrowGoBackFill className="icons" />
         </Link>
-        <h3>Checkbox Check</h3>
+        <h3>Checkbox & Radio button Check</h3>
       </div>
       <fieldset>
         <legend>Choose your interests</legend>

@@ -1,11 +1,33 @@
-.header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.compo_container {
+  /* border: 1px solid red; */
+  min-height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  position: relative;
+  top: 5.8rem;
+  margin-bottom: 6rem;
 }
 
-.header h3{
-    padding-right: 1rem;
+.iframe_container {
+  position: relative;
+  top: 6rem;
+  margin-bottom: 6rem;
+}
+
+.header {
+  /* border: 1px solid white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+}
+
+.header h3 {
+  padding-right: 1rem;
 }
 
 .dropdown {
@@ -25,9 +47,9 @@
   cursor: pointer;
 }
 
-.save_btn{
-    background-color: rgb(0, 160, 51);
-    margin-bottom: 1rem;
+.save_btn {
+  background-color: rgb(0, 160, 51);
+  margin-bottom: 1rem;
 }
 
 .form_div {
@@ -44,9 +66,14 @@ p {
   margin-bottom: 5px;
 }
 
-.icons{
-    cursor: pointer;
-    /* border: 1px solid red; */
-    padding: 1rem;
-    margin-top: 10px;
+.icons {
+  cursor: pointer;
+  /* border: 1px solid red; */
+  padding: 1rem;
+  margin-top: 10px;
+}
+
+.p_tag {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }

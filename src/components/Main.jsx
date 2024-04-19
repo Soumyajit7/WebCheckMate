@@ -12,6 +12,12 @@ import ResizableBox from "./ResizableBox";
 import Slider from "./Slider";
 import RightClickComponent from "./RightClick";
 import KeyboardEvent from "./KeyboardEvent";
+import MultipleWindows from "./MultipleWindows";
+import ImpliciteExplicite from "./ImpliciteExplicite";
+import WebTable from "./WebTable";
+import JavascriptExecutor from "./JavascriptExecutor";
+import ScreenShot from "./ScreenShot";
+import Questions from "./Questions";
 
 const Main = () => {
   return (
@@ -29,6 +35,17 @@ const Main = () => {
         <Route path="/slider" element={<Slider />} />
         <Route path="/right-click" element={<RightClickComponent />} />
         <Route path="/keyboard-events" element={<KeyboardEvent />} />
+        <Route path="/multiple-windows" element={<MultipleWindows />} />
+        <Route
+          path="/multiple-windows/:windowid"
+          element={<MultipleWindows />}
+        />
+        <Route path="/implicite-explicite" element={<ImpliciteExplicite />} />
+        <Route path="/webtable" element={<WebTable />} />
+        <Route path="/js-executor" element={<JavascriptExecutor />} />
+        <Route path="/ss" element={<ScreenShot />} />
+        <Route path="/questions" element={<Questions />} />
+        <Route path="/*" element={<>No Page Found</>} />
       </Routes>
     </div>
   );

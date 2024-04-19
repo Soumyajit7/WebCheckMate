@@ -1,0 +1,36 @@
+.multiple_windows_container {
+  border: 0px solid red;
+  margin-top: 3rem;
+}
+
+.window {
+  border: 2px solid white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 15rem;
+}
+
+.window_header {
+  border: 0px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.open_window {
+  text-decoration: none;
+}
+
+.window_close {
+  color: rgb(232, 44, 44);
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+
+.window_close:hover{
+    color: brown;
+}

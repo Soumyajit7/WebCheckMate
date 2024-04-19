@@ -1,0 +1,26 @@
+.implicite_explicite_container {
+  /* border: 1px solid red; */
+  min-height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  position: relative;
+  top: 4.1rem;
+  margin-bottom: 5rem;
+}
+
+.wait_btn {
+  margin: 1rem;
+}
+
+.wait_box {
+  border: 1px solid white;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  justify-content: center;
+}

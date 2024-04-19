@@ -1,0 +1,22 @@
+.questions_container {
+  /* border: 1px solid red; */
+  min-height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  position: relative;
+  top: 6rem;
+  margin-bottom: 7rem;
+}
+
+.questions {
+  border: 1px solid white;
+  border-radius: 7px;
+  text-align: left;
+  padding: 10px;
+  margin: 10px;
+}
+
+.gap-10 {
+  margin-bottom: 10px;
+}

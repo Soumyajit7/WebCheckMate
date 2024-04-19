@@ -12,8 +12,26 @@ const Popup = () => {
   const [testerLocation, setTesterLocation] = useState(null);
   const [testerCompany, setTesterCompany] = useState(null);
 
+  // method for popup check
+  const handleCheckPopup = async () => {
+    Swal.fire({
+      title: "Check all the buttons",
+      showDenyButton: true,
+      showCancelButton: true,
+      confirmButtonText: "Save",
+      denyButtonText: `Don't save`,
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        Swal.fire("Saved!", "", "success");
+      } else if (result.isDenied) {
+        Swal.fire("Changes are not saved", "", "info");
+      }
+    });
+  };
+
   // pop up button for tester name
-  const handlePopup = async () => {
+  const handlePopupName = async () => {
     const { value: formValues } = await Swal.fire({
       title: "Enter your details",
       html: `
@@ -89,8 +107,11 @@ const Popup = () => {
         <h3>Popup Check</h3>
       </div>
       <div className="popup_container">
-        <button className="button" onClick={handlePopup}>
-          Click For Popup
+        <button className="button" onClick={handleCheckPopup}>
+          Click For Check Popup
+        </button>
+        <button className="button" onClick={handlePopupName}>
+          Click For Your Name
         </button>
         <button className="button" onClick={handlePopupGithub}>
           Click For Github Account
