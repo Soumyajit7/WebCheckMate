@@ -108,7 +108,7 @@ const Questions = [
     ],
   },
   {
-    title: "Question 15 : Screenshot Check",
+    title: "Question 16 : Screenshot Check",
     questions_list: [
       `Go to Screenshot Page and click on the button 'Click to See Decoration' a new popup will be visible, take the screenshot and store in a screenshots folders inside with project repo.`,
     ],
